@@ -1,0 +1,48 @@
+.topBar{
+	text-align: center;
+	list-style-type: none;
+	padding-top: 27px;
+	background-image: url(../images/blue.png);
+	background-size: 30px 10px; 
+	height: 45px;
+}
+.litem{
+	border: solid 1px;
+	display: inline;
+	margin: 25px;
+	padding: 10px;
+	vertical-align: middle;
+	background-color: white;
+	font-weight: bold;
+}
+
+body{
+background-image: url(../images/peach.jpg);
+}
+
+.bigBoyBag{
+	display: inline;
+	text-align: center;
+}
+.bigBoys {
+	text-align: center;
+	font-family: Arial;
+	display: block;
+	border-style: solid;
+	border-width: 2px
+	width: 200px;
+	height: 100px;
+	background-color: lightblue;
+}
+.description{
+
+}
+.topHeader{
+
+}
+.stdButton{
+
+}
+table, td {
+   border: 1px solid black;
+}

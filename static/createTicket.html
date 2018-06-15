@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Create Ticket</title>
+	<link rel="stylesheet" type="text/css" href=".\css\style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type=
+	"text/javascript"
+			src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+	</script>
+	<script src="./angJS/createTicket.js"></script>
+</head>	
+<body>
+	<div>
+	<div>
+		<ul class="topBar">
+			<li class="litem"><a href="./home.html">Home</a></li>
+			<li class="litem"><a href="./about.html">About</a></li>
+			<li class="litem"><a href="./profile">Profile</a></li>
+			<li class="litem"><a href="./logout">Logout</a></li>
+		</ul>
+	</div>
+	<div class="container" ng-app="createTicketApp" ng-controller="createTicketCtrl">
+	<div class="container">
+		<h2>Create Ticket</h2>
+	  	<form action="/createTicket" method="POST">
+	    	<div class="form-group">
+	      		<label for="subject">Subject:</label>
+	      		<input type="subject" class="form-control" id="subject" name="subject">
+	    	</div>
+	   	 	<div class="form-group">
+	      		<label for="message">Message:</label>
+	      		<input type="message" class="form-control" id="message" name="message">
+	    	</div>
+
+	    	<button type="submit" class="btn btn-default">submit</button>
+	    </form>
+	</div>
+			
+			
+		</div>
+</body>
+</html>

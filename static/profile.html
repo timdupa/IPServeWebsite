@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Profile</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" >
+	</script>
+
+	<link rel="stylesheet" type="text/css" href=".\css\style.css">
+
+	<script type="text/javascript" src=".\angJS\viewUsers.js"></script>
+</head>
+<body>
+	<div>
+		<ul class="topBar">
+			<li class="litem"><a href="./home.html">Home</a></li>
+			<li class="litem"><a href="./about.html">About</a></li>
+			<li class="litem"><a href="./profile">Profile</a></li>
+			<li class="litem"><a href="./logout">Logout</a></li>
+		</ul>
+	</div>
+	<div class="container" ng-app="profileApp" ng-controller="profileCtrl">
+		<div class="content">
+			<table class="table table-hover">
+				<div class=row><p></p></div>
+				<h1>{{msg}}</h1>
+				<tr>
+					<th class="col-md-2">Email</th>
+						<th class="col-md-2">Password</th>
+						<th class="col-md-2">Name</th>
+						<th class="col-md-2">Phone Number</th>		
+					</tr>
+					<tr ng-repeat="item in menu track by $index">
+						<td class="col-md-2"><input type="text" ng-model="item.user|uppercase"></td>
+						<td class="col-md-1"><input type="text" ng-model="item.pwd"></td>
+						<td class="col-md-2"><input type="text" ng-model="item.name"></td>
+						<td class="col-md-2"><input type="text" ng-model="item.phoneNumber"></td>
+						
+						<td class="col-md-1"><button type="button" class="btn btn-primary" ng-click="updateProfile(item)" >Update</button></td>
+						
+
+					</tr>
+
+				</table>
+
+				<hr>
+			</div>
+			
+			
+		</div>	
+	</div>
+</body>
+</html>
